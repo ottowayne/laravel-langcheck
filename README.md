@@ -9,10 +9,10 @@
 Install via composer:
 
 ```
-composer require ottowayne/langcheck --require-dev
+composer require ottowayne/langcheck --dev
 ```
 
-"require-dev" is optional but I recommend using this package in local environments only.
+The *dev*-paramter is optional but I recommend using this package in local environments only.
 
 Finally add the service provider to your app.php:
 
