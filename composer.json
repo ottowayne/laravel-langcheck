@@ -1,0 +1,24 @@
+{
+    "name": "ottowayne/laravel-langcheck",
+    "description": "Laravel package to find missing translation entries",
+    "keywords": ["laravel", "translation", "trans", "language", "lang"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ottowayne",
+            "email": "mr.ottowayne@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.0.x",
+        "illuminate/console": "5.0.x",
+        "illuminate/filesystem": "5.0.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ottowayne\\LangCheck\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
