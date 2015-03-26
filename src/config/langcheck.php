@@ -1,8 +1,11 @@
 <?php
 
 return [
-    /* Define behaviour if a missing key is found when Lang::get is called */
-    'exception' => true,
-    'log' => true,
+    /* Behaviour if a missing key is found when Lang::get is called */
+    'exception' => false,
+    'log' => false,
+
+    /* Behaviour for lang:check command */
     'skipvendor' => true,
+    'usehints' => true,
 ];

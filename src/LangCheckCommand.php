@@ -20,7 +20,7 @@ class LangCheckCommand extends Command implements SelfHandling {
     {
         // get paths of registered namespace hints
         // e.g user in @lang('user::myview') resolving to app/Modules/User/Resources
-        $resDirs = Lang::getHints();
+        $resDirs = Config::get('langcheck.usehints') ? Lang::getHints() : array();
         $resDirs[base_path() . '/resources/lang'] = 'app';
 
         // check each resource directory
