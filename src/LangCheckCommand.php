@@ -52,12 +52,15 @@ class LangCheckCommand extends Command implements SelfHandling {
                         if ($langCodeA == $langCodeB)
                             continue;
 
-                        $result = $this->array_diff_key_recursive($langArrayA, $langArraysB[$fileNameA]);
-                        if (!empty($result)) {
-                            $keys = implode($this->arrayKeysRecursive($result), ', ');
-                            $this->error(" * File '$fileNameA'");
-                            $this->error("   - Locale '$langCodeB' missing [$keys] existing in locale '$langCodeA'");
-                        }
+                        if (array_key_exists($fileNameA, $langArraysB)) {
+                            $result = $this->array_diff_key_recursive($langArrayA, $langArraysB[$fileNameA]);
+                            if (!empty($result)) {
+                                $keys = implode($this->arrayKeysRecursive($result), ', ');
+                                $this->error(" * File '$fileNameA':");
+                                $this->error("   - Locale '$langCodeB' missing [$keys] existing in locale '$langCodeA'");
+                            }
+                        } else
+                            $this->error(" * File '$fileNameA' existing in locale '$langCodeA' is missing for locale '$langCodeB'");
                     }
                 }
             }
