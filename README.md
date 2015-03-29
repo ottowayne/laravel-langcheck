@@ -8,13 +8,13 @@ Adds a "lang:check" Artisan command that finds missing entries in your translati
 
 ## Installation
 
-Install via composer:
+To install via composer add the following line to your composer.json:
 
 ```
-composer require ottowayne/langcheck --dev
+"ottowayne/laravel-langcheck": "dev-master"
 ```
 
-The *dev*-paramter is optional but I recommend using this package in local environments only.
+I recommend using this package in local environments (require-dev) only.
 
 Finally add the service provider to your app.php:
 
