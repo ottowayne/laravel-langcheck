@@ -1,5 +1,7 @@
 # Laravel LangCheck
 
+Adds a "lang:check" Artisan command that finds missing entries in your translation files.
+
 ## Compatibility
 
 * Laravel 5.0
