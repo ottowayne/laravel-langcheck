@@ -2,6 +2,8 @@
 
 Adds a "lang:check" Artisan command that finds missing entries in your translation files.
 
+**This package is no longer maintained - you may look into [laravel-langman](https://github.com/themsaid/laravel-langman)**
+
 ## Compatibility
 
 * Laravel 5.0
